@@ -1,9 +1,27 @@
 
-#include "nsfw\test.h"
-#include "glm\glm.hpp"
+#include "nsfw\context.h"
+#include <iostream>
 
 void main()
 {
-	glm::trunc(10.10);
-	test_linkages();
+	Context context;
+
+	context.initialize(800,600,"NSFW Context Test");
+
+	while (context.step())
+	{
+		double x, y;
+		int w, h;
+		context.getMousePos(x, y);
+		context.getDim(w, h);
+
+		std::cout << x << ' ' << y << ' ' << w << ' ' << h << ' '
+			<< context.getTime() << ' ' << context.getKey(' ') 
+			<< ' ' << context.getMouseButton(0) << std::endl;
+
+	}
+
+
+	context.terminate();
+
 }
