@@ -146,10 +146,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\nsfw\Context.h" />
+    <ClInclude Include="include\nsfw\draw.h" />
+    <ClInclude Include="include\nsfw\fwd.h" />
+    <ClInclude Include="include\nsfw\make.h" />
+    <ClInclude Include="include\nsfw\nsfw.h" />
+    <ClInclude Include="include\nsfw\RenderObjects.h" />
+    <ClInclude Include="include\nsfw\Vertex.h" />
     <ClInclude Include="src\glinc.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Context.cpp" />
+    <ClCompile Include="src\draw.cpp" />
+    <ClCompile Include="src\make.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
